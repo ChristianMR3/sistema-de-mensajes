@@ -17,3 +17,20 @@ Una interfaz de software para enviar los mensajes desde la computadora via seria
 La interfaz de software debe permitir agreagr mensajes y/o borrarlos.
 
 # Materiales 
+Protoboard
+Arduino mega 2560
+Cable USB A a B (cable de arduino)
+Pantalla LCD 16x2
+Teclado matricial 4x4
+RTC DS3231
+Sensor de humedad DTH11
+Fotoresistencia
+Sensor LM35
+Modulo Bluetooth HC-05 
+Cables conectores(macho/macho, macho/hembra)
+
+# Librerias
+LiquidCrystal
+DHT11
+Keypad-master
+RTC_DS3231-master
