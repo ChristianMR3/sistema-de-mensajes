@@ -31,13 +31,13 @@ int LDR_val = 0; //Valor bruto obtenido por el LDR [0,1023]
 int LDR_escalado = 0; //Variable en la que almacenaremos el escalado, nos interesa un valor [0,100]
 int LDR_invertido = 0;
 
-LiquidCrystal lcd(3, 2, 4, 5, 6, 7);
-float temp, hum;
-int sensor = 22;
+LiquidCrystal lcd(3, 2, 4, 5, 6, 7); // pines del lcd 
+float temp, hum;   // variables de tipo flotante para la temperatura y la humadad
+int sensor = 22;   // declaramos el pin del sensor
 DHT11 dht11(sensor);
-RTC_DS1307 RTC;
+RTC_DS1307 RTC;   //declaramos el tipo de RTC en este caso fue el RTC_DS1307 de tipo RTC
 
-String readString;
+String readString; // leera el estring que se mande por bluetooth 
 String m;
 
 void setup() {
@@ -55,8 +55,8 @@ void setup() {
 void loop() {
   // put your main code here, to run repeatedly:
 
-  DateTime now = RTC.now();
-  dht11.read(hum, temp);
+  DateTime now = RTC.now(); // obtenemos el tiempo actual en el momento que enviamos el mensaje
+  dht11.read(hum, temp);  // leeamos los datos del sensor 
   LDR_val = analogRead(ldr); //Escribimos el valor leído por el LDR en la variable "LDR_val" para procesarlo a continuación
   LDR_escalado = map(LDR_val, 0, 1023, 0, 100); //A través de la función "map" convertimos el valor de LDR_val [0,1023] a un valor porcentual [0,100]
   LDR_invertido = (100 - LDR_escalado); //Restamos a [100] el valor obtenido por el escalado ya que nuestra resistencia es Pull-down y lo que nos interesa es medir la cantidad de luz, no de oscuridad.
@@ -70,10 +70,11 @@ void loop() {
     readString += c;
   }
 
-  if (readString.length() > 0 || tecla != NO_KEY) {
+  if (readString.length() > 0 || tecla != NO_KEY) { 
     Serial.println(readString);
     int tam = readString.length();
-    if (readString == "Button1" || tecla == '1') {
+    
+    if (readString == "Button1" || tecla == '1') { // si el boton presionado desde la aplicaion es el boton 1 o se presiona la tecla 1 del teclado matricial se imprimira el mensaje
       m = "Buen dia!!!";
       mostrarMensaje(m);
       mostrarRTCLCD(); //Se manda a llamar la funcion "mostrarRTCLCD" y despues se espera un tienpo de 1seg
@@ -128,7 +129,7 @@ void mostrarRTCLCD() //Funcion que lee los datos de modulo RTC y despues los imp
   DateTime now = RTC.now(); //obtiene datos del modulo RTC
   // lcd.clear();
   lcd.setCursor(0, 0);
-  lcd.print("Fecha ");
+  lcd.print("Fecha "); // se imprime la fecha
   lcd.print(now.day());
   lcd.print('/');
   lcd.print(now.month());
@@ -136,7 +137,7 @@ void mostrarRTCLCD() //Funcion que lee los datos de modulo RTC y despues los imp
   lcd.print(now.year());
   lcd.print(" ");
   lcd.setCursor(0, 1);
-  lcd.print("Hora ");
+  lcd.print("Hora ");  // se imprime la hora
   lcd.print(now.hour());
   lcd.print(':');
   lcd.print(now.minute());
@@ -148,10 +149,10 @@ void mostrarRTCLCD() //Funcion que lee los datos de modulo RTC y despues los imp
 
 void mostrarMensaje(String mensaje) {
   int tam_texto = mensaje.length();
-if(tam_texto > 16){
+if(tam_texto > 16){         // si el mensaje tiene mas de 16 caracteres se desplaza hacia la izquierda 
   for (int i = 1 ; i <= tam_texto ; i++)
   {
-    String texto = mensaje.substring(i - 1);
+    String texto = mensaje.substring(i - 1); 
     lcd.clear();
     lcd.setCursor(0, 0);
     lcd.print(texto);
@@ -159,17 +160,18 @@ if(tam_texto > 16){
 
   }
 }else {
-  lcd.print(mensaje);
-  }
+  lcd.print(mensaje); // si el mensaje tiene menos de 16 caracteres se queda estatico 
   delay(5000);
+  }
+  
   lcd.clear();
   lcd.setCursor(0, 0);
-  lcd.print("Temp: ");
+  lcd.print("Temp: ");  // se imprime la temperatura
   lcd.print(temp);
   lcd.print(" C");
 
   lcd.setCursor(0, 1);
-  lcd.print("Humedad: ");
+  lcd.print("Humedad: ");  // se imprime la humedad
   lcd.print(hum);
   lcd.print("%");
   delay(5000);
