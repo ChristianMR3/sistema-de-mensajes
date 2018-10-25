@@ -1,7 +1,19 @@
-# sistema-de-mensajes
-Sistema Mimetizador Visualizador de Mensajes
+# Instituto tecnológico de león
 
-# Descripcion del Proyecto
+# Sistemas programables
+
+# Practica 3
+
+Sistema Sistema Mimetizador Visualizador de Mensajes
+
+# Realizado por:
+
+Christian Moreno Ramirez
+
+Juan Pablo Barroso Hernández
+
+
+## Descripcion del Proyecto
 
 un sistema para el despliegue de mensajes en una pantalla LCD, el objetivo es que al
 llegar un individuo pueda ver en un pequeno tablero electronico una serie de mensajes o notas almacenados.
@@ -16,34 +28,43 @@ Un interfaz de hardware para navegar entre los mensajes.
 Una interfaz de software para enviar los mensajes desde la computadora via serial.
 La interfaz de software debe permitir agreagr mensajes y/o borrarlos.
 
-# Materiales 
-Protoboard
+## Herramientas de desarrollo
+[Arduino IDE](https://www.arduino.cc/)
+[App Inventor](http://appinventor.mit.edu/explore/)
+[Fritzing](http://fritzing.org/home/)
 
-Arduino mega 2560
 
-Cable USB A a B (cable de arduino)
+## Materiales 
+- Protoboard
 
-Pantalla LCD 16x2
+- Arduino mega 2560
 
-Teclado matricial 4x4
+- Cable USB A a B (cable de arduino)
 
-RTC DS3231
+- Pantalla LCD 16x2
 
-Sensor de humedad DTH11
+- Teclado matricial 4x4
 
-Fotoresistencia
+- RTC DS3231
 
-Sensor LM35
+- Sensor de humedad DTH11
 
-Modulo Bluetooth HC-05 
+- Fotoresistencia
 
-Cables conectores(macho/macho, macho/hembra)
+- Sensor LM35
 
-# Librerias
-LiquidCrystal
+- Modulo Bluetooth HC-05 
 
-DHT11
+- Cables conectores(macho/macho, macho/hembra)
 
-Keypad-master
+## Librerias
+- LiquidCrystal
 
-RTC_DS3231-master
+- DHT11
+
+- Keypad-master
+
+- RTC_DS3231-master
+
+## Manejo del sistema
+
