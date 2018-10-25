@@ -75,4 +75,11 @@ La interfaz de software debe permitir agreagr mensajes y/o borrarlos.
 ![20181025_072210](https://user-images.githubusercontent.com/43175659/47502831-51f66e80-d82e-11e8-9845-f99cb40f64b4.jpg)
 >mensaje seleccionado
 
+![20181025_072214](https://user-images.githubusercontent.com/43175659/47503113-f24c9300-d82e-11e8-9004-4a6589a9c3dd.jpg)
+> Temperatura y Humedad
 
+![20181025_072219](https://user-images.githubusercontent.com/43175659/47503134-02647280-d82f-11e8-911a-3e6c06e0ee1d.jpg)
+> Luminosidad
+
+![20181025_072645](https://user-images.githubusercontent.com/43175659/47503155-0db79e00-d82f-11e8-8e58-3f2d63d05e74.jpg)
+> Fecha y Hora
