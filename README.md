@@ -1,8 +1,8 @@
 # Instituto tecnológico de león
 
-# Sistemas programables
+Sistemas programables
 
-# Practica 3
+Practica 3
 
 Sistema Sistema Mimetizador Visualizador de Mensajes
 
@@ -13,7 +13,7 @@ Christian Moreno Ramirez
 Juan Pablo Barroso Hernández
 
 
-## Descripcion del Proyecto
+# Descripcion del Proyecto
 
 un sistema para el despliegue de mensajes en una pantalla LCD, el objetivo es que al
 llegar un individuo pueda ver en un pequeno tablero electronico una serie de mensajes o notas almacenados.
@@ -28,13 +28,16 @@ Un interfaz de hardware para navegar entre los mensajes.
 Una interfaz de software para enviar los mensajes desde la computadora via serial.
 La interfaz de software debe permitir agreagr mensajes y/o borrarlos.
 
-## Herramientas de desarrollo
+# Herramientas de desarrollo
+
 [Arduino IDE](https://www.arduino.cc/)
+
 [App Inventor](http://appinventor.mit.edu/explore/)
+
 [Fritzing](http://fritzing.org/home/)
 
 
-## Materiales 
+# Materiales 
 - Protoboard
 
 - Arduino mega 2560
@@ -57,7 +60,7 @@ La interfaz de software debe permitir agreagr mensajes y/o borrarlos.
 
 - Cables conectores(macho/macho, macho/hembra)
 
-## Librerias
+# Librerias
 - LiquidCrystal
 
 - DHT11
@@ -66,5 +69,5 @@ La interfaz de software debe permitir agreagr mensajes y/o borrarlos.
 
 - RTC_DS3231-master
 
-## Manejo del sistema
+# Manejo del sistema
 
