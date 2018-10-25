@@ -71,3 +71,8 @@ La interfaz de software debe permitir agreagr mensajes y/o borrarlos.
 
 # Manejo del sistema
 
+# Resultados
+![20181025_072210](https://user-images.githubusercontent.com/43175659/47502831-51f66e80-d82e-11e8-9845-f99cb40f64b4.jpg)
+>mensaje seleccionado
+
+
