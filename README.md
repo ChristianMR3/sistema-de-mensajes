@@ -79,6 +79,8 @@ En la interfaz de software tu puedes presionar un boton del 1 al 5 y se mostrar�
 Además puedes escribir un mensaje que tu quieras siempre y cuando sea menor o igual a 140 caracteres y al presionar el botón de enviar mensaje se mostrará en la pantalla LCD. Si el mensaje es mayor de 16 caracteres el mensaje se desplazará de derecha a izquierda para que se visualice el mensaje completo.
 
 # Resultados
+![20181025_072210](https://user-images.githubusercontent.com/43175659/47502831-51f66e80-d82e-11e8-9845-f99cb40f64b4.jpg)
+> Mensaje seleccionado
 
 ![20181025_072214](https://user-images.githubusercontent.com/43175659/47503113-f24c9300-d82e-11e8-9004-4a6589a9c3dd.jpg)
 > Temperatura y Humedad
