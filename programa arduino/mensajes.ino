@@ -1,8 +1,8 @@
-#include <Keypad.h>
-#include <DHT11.h>
-#include <LiquidCrystal.h>
+#include <Keypad.h> // libreria del teclado matricial
+#include <DHT11.h> //importamos la libreia del del sensor de temperatura y humedad
+#include <LiquidCrystal.h> // libreria del lcd
 #include <Wire.h>
-#include <RTClib.h>
+#include <RTClib.h> //libreria del rtc 
 #define ldr 5  //Pin analógico donde colocamos el LDR
 
 /////teclado
@@ -33,8 +33,8 @@ int LDR_invertido = 0;
 
 LiquidCrystal lcd(3, 2, 4, 5, 6, 7); // pines del lcd 
 float temp, hum;   // variables de tipo flotante para la temperatura y la humadad
-int sensor = 22;   // declaramos el pin del sensor
-DHT11 dht11(sensor);
+int sensor = 22;   // declaramos el pin del sensor de temperatura y humedad
+DHT11 dht11(sensor); // declaramos la variable dht11 de tipo DHT11 y le asignamos el pin 
 RTC_DS1307 RTC;   //declaramos el tipo de RTC en este caso fue el RTC_DS1307 de tipo RTC
 
 String readString; // leera el estring que se mande por bluetooth 
@@ -56,7 +56,7 @@ void loop() {
   // put your main code here, to run repeatedly:
 
   DateTime now = RTC.now(); // obtenemos el tiempo actual en el momento que enviamos el mensaje
-  dht11.read(hum, temp);  // leeamos los datos del sensor 
+  dht11.read(hum, temp);  // leemos los datos del sensor 
   LDR_val = analogRead(ldr); //Escribimos el valor leído por el LDR en la variable "LDR_val" para procesarlo a continuación
   LDR_escalado = map(LDR_val, 0, 1023, 0, 100); //A través de la función "map" convertimos el valor de LDR_val [0,1023] a un valor porcentual [0,100]
   LDR_invertido = (100 - LDR_escalado); //Restamos a [100] el valor obtenido por el escalado ya que nuestra resistencia es Pull-down y lo que nos interesa es medir la cantidad de luz, no de oscuridad.
